@@ -365,14 +365,14 @@ public class NewContact extends javax.swing.JFrame {
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(picLable, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                .addComponent(picLable, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(picLable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(picLable, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jDesktopPane1.setLayer(picLable, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -833,6 +833,12 @@ public class NewContact extends javax.swing.JFrame {
         File f = ch.getSelectedFile();
         fileName = f.getAbsolutePath();
         path.setText(fileName);
+        
+        format = new ImageIcon(fileName);
+        picLable.setIcon(format);
+        
+        
+        
         try{
             File image = new File (fileName);
             FileInputStream fis = new FileInputStream(image);
