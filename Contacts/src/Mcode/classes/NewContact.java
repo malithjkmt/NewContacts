@@ -30,6 +30,7 @@ public class NewContact extends javax.swing.JFrame {
      */
     public NewContact() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

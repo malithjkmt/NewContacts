@@ -42,6 +42,7 @@ public class ContactsBook extends javax.swing.JFrame {
     public ContactsBook() {
         initComponents();
         FillList();
+        setLocationRelativeTo(null);
     }
 
     /**
