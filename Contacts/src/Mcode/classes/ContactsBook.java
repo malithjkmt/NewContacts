@@ -20,7 +20,7 @@ public class ContactsBook extends javax.swing.JFrame {
         String password = "ui2130mn";
         
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            //Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, username, password);
             java.sql.Statement stmt = con.createStatement();
             String Query = "SELECT * FROM person";
@@ -33,7 +33,7 @@ public class ContactsBook extends javax.swing.JFrame {
             }
             jList3.setModel(DLM);
             
-        } catch (SQLException | ClassNotFoundException ex) {
+        } catch (SQLException  ex) {
             //JOptionPane.showMessageDialog(null, ex.toString());
             System.out.println(ex.toString());
         }

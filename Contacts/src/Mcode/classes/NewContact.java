@@ -787,7 +787,7 @@ public class NewContact extends javax.swing.JFrame {
          PreparedStatement pst = null;
         
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            //Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, username, password);
             java.sql.Statement stmt = con.createStatement();
             String Query = "INSERT INTO person (FirstName, LastName, `Group`, Tags, NIC, Sex, MobileOne,MobileTwo,Home, Office, Fax,PersonalAddress, OfficeAddress, Business, Notes, BirthDay, Picture, AccountNumber,NickName, Branch, CIFno, AccountType, EmailPersonal, EmailBusiness,WebPagePersonal,WebPageBusiness)values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
@@ -825,7 +825,7 @@ public class NewContact extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "A new contact is added");
         
             firstNameTxt.setText(null);
-        } catch (SQLException | ClassNotFoundException ex) {
+        } catch (SQLException ex) {
             //JOptionPane.showMessageDialog(null, ex.toString());
             System.out.println(ex.toString());
         }
